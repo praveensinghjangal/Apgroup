@@ -3,12 +3,15 @@ const bodyParser = require('body-parser');
 const route = require('./routes/route.js');
 const { default: mongoose } = require('mongoose');
 const app = express();
+const cors = require('cors')
 
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+mongoose.set('strictQuery', true)
 
-mongoose.connect("mongodb+srv://jangalpraveensingh7:Jangal77777@cluster0.p7toq.mongodb.net/projectRuno?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://jangalpraveensingh7:Jangal77777@cluster0.p7toq.mongodb.net/projectAp?retryWrites=true&w=majority", {
     useNewUrlParser: true
 })
 .then( () => console.log("MongoDb is connected"))

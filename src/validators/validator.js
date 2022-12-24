@@ -43,18 +43,8 @@ const isValidpassword = function (password) {
 }
 
 
-const isValidPinCode = (pincode) => {
-    if (/^[1-9][0-9]{5}$/.test(pincode))
-        return true
-}
-
- const isValidAadharcard = function (AadharNumber) {
-   if(/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/.test(AadharNumber)){
-   return true;
-   }
-   return false;
-}
 
 
 
-module.exports = { isValidBody, isValidEmail, isValidName, isValidPhone, isValidpassword,isValidPinCode, isValidAadharcard }
+
+module.exports = { isValidBody, isValidEmail, isValidName, isValidPhone, isValidpassword}
